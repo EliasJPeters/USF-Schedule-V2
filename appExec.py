@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication
 import sys
 import windowUI
 from functions import * 
-
+from seleniumContents import openSite, inputInformation
 
 class ExampleApp(QtWidgets.QMainWindow, windowUI.Ui_ClassChecker):
     def __init__(self, parent=None):
@@ -42,11 +42,16 @@ def main():
             return True
         else:
             return False
-        
+    
+    def debugBrowser():
+        setVariables()
+        print("Debug browser function called")
+        driver = openSite()
+        inputInformation(driver, content.getTerm())
 
     form.pushButton.clicked.connect(setVariables)
     form.pushButton.clicked.connect(testVariables)
-    
+    form.Debug.clicked.connect(debugBrowser)
     
     #form.pushButton.clicked.connect()
     form.show()

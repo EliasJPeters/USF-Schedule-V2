@@ -1,0 +1,164 @@
+1670274368188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileVgqRVz"
+*** You are running in headless mode.
+1670274410780	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile22Ztee"
+*** You are running in headless mode.
+1670274411190	Marionette	INFO	Marionette enabled
+1670274411195	Marionette	INFO	Listening on port 54823
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1670274411531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile22Ztee\\search.json.mozlz4", (void 0)))
+1670274490624	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilexJApH1"
+*** You are running in headless mode.
+1670274491054	Marionette	INFO	Marionette enabled
+1670274491059	Marionette	INFO	Listening on port 55009
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1670274491378	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilexJApH1\\search.json.mozlz4", (void 0)))
+[Parent 18376, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1670274573090	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile6OGXzk"
+*** You are running in headless mode.
+1670274573512	Marionette	INFO	Marionette enabled
+1670274573517	Marionette	INFO	Listening on port 55298
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1670274573881	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile6OGXzk\\search.json.mozlz4", (void 0)))
+1670274603517	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilehKzQ5y"
+*** You are running in headless mode.
+1670274603925	Marionette	INFO	Marionette enabled
+1670274603930	Marionette	INFO	Listening on port 55476
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1670274604306	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilehKzQ5y\\search.json.mozlz4", (void 0)))
+1670274668311	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileya9b86"
+*** You are running in headless mode.
+1670274668765	Marionette	INFO	Marionette enabled
+1670274668770	Marionette	INFO	Listening on port 55669
+1670274668961	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileya9b86\\search.json.mozlz4", (void 0)))
+1670274684336	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileeP0ejk"
+1670274684770	Marionette	INFO	Marionette enabled
+1670274684776	Marionette	INFO	Listening on port 55755
+1670274685198	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileeP0ejk\\search.json.mozlz4", (void 0)))
+1670274721503	Marionette	INFO	Stopped listening on port 55755
+1670274765517	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileyRpq9J"
+1670274765969	Marionette	INFO	Marionette enabled
+1670274765974	Marionette	INFO	Listening on port 55909
+1670274766174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileyRpq9J\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670274790955	Marionette	INFO	Stopped listening on port 55909
+[Parent 22348, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:746
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1670275145373	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilerEo72v"
+1670275145809	Marionette	INFO	Marionette enabled
+1670275145815	Marionette	INFO	Listening on port 56399
+1670275146065	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilerEo72v\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670275152279	Marionette	INFO	Stopped listening on port 56399
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 18988, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 18988, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 18988, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1670275596072	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileVzaoUy"
+1670275596514	Marionette	INFO	Marionette enabled
+1670275596522	Marionette	INFO	Listening on port 57882
+1670275596773	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileVzaoUy\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670275601592	Marionette	INFO	Stopped listening on port 57882
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1670275777091	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile4GHnDK"
+1670275777518	Marionette	INFO	Marionette enabled
+1670275777523	Marionette	INFO	Listening on port 58269
+1670275777908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile4GHnDK\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1670275815635	Marionette	INFO	Stopped listening on port 58269
+1670275823549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileyxBiAI"
+1670275823978	Marionette	INFO	Marionette enabled
+1670275823983	Marionette	INFO	Listening on port 58412
+1670275824393	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileyxBiAI\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670275828761	Marionette	INFO	Stopped listening on port 58412
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 21488, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1670275858378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile9IU9Sq"
+1670275858804	Marionette	INFO	Marionette enabled
+1670275858809	Marionette	INFO	Listening on port 58605
+1670275859192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile9IU9Sq\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670276027399	Marionette	INFO	Stopped listening on port 58605
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 22220, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+urce://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile0Hk0Vm\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670275941421	Marionette	INFO	Stopped listening on port 58947
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 22076, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1670275965722	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilevk3I4G"
+1670275966143	Marionette	INFO	Marionette enabled
+1670275966149	Marionette	INFO	Listening on port 59059
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1670275966964	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilevk3I4G\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670275970825	Marionette	INFO	Stopped listening on port 59059
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: resource://services-settings/Utils.jsm, line 239: TypeError: NetworkError: Network request failed
+1670275979683	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileMLBq0l"
+1670275980125	Marionette	INFO	Marionette enabled
+1670275980129	Marionette	INFO	Listening on port 59151
+1670275980336	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileMLBq0l\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1670276003999	Marionette	INFO	Stopped listening on port 59151
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1670276032778	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilemh19CG"
+1670276033211	Marionette	INFO	Marionette enabled
+1670276033217	Marionette	INFO	Listening on port 59335
+1670276033432	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilemh19CG\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670276054795	Marionette	INFO	Stopped listening on port 59335
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 3800, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:746
+1670276087391	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileFwFMmL"
+1670276087852	Marionette	INFO	Marionette enabled
+1670276087858	Marionette	INFO	Listening on port 59507
+1670276087949	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileFwFMmL\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670276094007	Marionette	INFO	Stopped listening on port 59507
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1670276199359	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile3gS2OY"
+1670276199795	Marionette	INFO	Marionette enabled
+1670276199800	Marionette	INFO	Listening on port 59762
+1670276200203	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile3gS2OY\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1670276206324	Marionette	INFO	Stopped listening on port 59762
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
