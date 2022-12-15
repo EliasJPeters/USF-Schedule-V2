@@ -1,12 +1,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QMessageBox
 import sys
 import windowUI
 from functions import * 
-from seleniumContents import openSite, inputInformation
-
-#possibleTerms = ["Summer 2023","Spring 2023","Fall 2022","Summer 2022","Spring 2022","Fall 2021","Summer 2021","Spring 2021","Fall 2020",
-#"Summer 2020","Spring 2020","Fall 2019","Summer 2019","Spring 2019","Fall 2018"]
+from seleniumContents import openSite, inputInformation, crnError
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
@@ -15,20 +13,31 @@ partoftermValues = ["null","A","B","S","X","D","G","Z","W","Y"]
 
 campusValues = ["null","T","S","P","L","9","7","6","8","1","3","4","2","C"]
 
-#possibleColleges = ["1986 Conversion College", "Acad. Support & Achievement", "Applied Arts and New Media", "Architecture & Community Desig", 
-#"Arts & Sciences", "Arts and Letters", "Arts and Sciences", "Arts and Sciences USFSM", "Arts and Sciences USFSP", "Basic Studies", "Behavioral & Community Science",
-#"Business (BA)", "Business (BU)", "Business USFSM", "Business USFSP", "Cooperative Education", "Double Major", "Early University Programs", 
-#"Education (ED)", "Education (EU)", "Education Joint Program", "Education Joint Program USFSP", "Education USFSM", "Education USFSP",
-#"Engineering", "Global Sustainability", "Graduate Studies", "Hosp & Tourism Leadership", "Human and Social Sciences", "INTO Pathway",
-#"Institutes and Affiliates", "Interdisciplinary Program", "Language and Literature", "Liberal Arts", "Liberal Arts & Soc Sci USFSM",
-##"Marine Science", "Medicine", "Natural Sciences", "New College", "No College Designated", "Nursing", "Off Campus Term / Misc", "Office of the Registrar",
-#"Program of Independent Studies", "Public Health", "School of Mental Hlth Studies", "Science & Mathematics USFSM", "Social and Behavioral Sciences",
-#"Student Admissions & Advising", "Taneja College of Pharmacy", "Technology and Innovation", "The Arts", "The Honors College", "UG Student Advising",
-#"USF World-Study Abroad", "Undergraduate Studies", "Undergraduate Studies USFSP", "Unused College (for stat calc)"]
-
 collegeValues = ["null","XX","SA","AT","AR","AC","AL","AS","AM","AP","BS","BC","BA","BU","BM","BP","CE","DM","EA","ED","EU","EJ","JP","EM","EP",
 "EN","CS","GS","HM","HT","IN","ZZ","IP","LL","LA","LM","MS","MD","NS","NC","00",
 "NR","OC","RO","BI","PH","FM","MM","SS","ST","RX","TT","FA","HC","SM","WL","US","SP"]
+
+departmentValues = ["null","ASG","ACP","ACC","ADG","EDB","ADM","ATS","EDV","ADV","AFA","AMH","AGE","AFR","HUN","AAS","AMS","ANA","ANC","ANE","ANT","ARC","MIS",
+"ART","EDA","ACD","AST","ATH","ATG","BIS","BSB","EGB","CBS","BKB","BCD","BMB","BSP","BIO","BIN","BCM","BOT","BDG","MBA","GBA","BUD","CMM","CDV","COT","CSW",
+"ECM","ECH","CHM","CFS","EDR","CCR","EGX","CLA","ENT","COE","CSL","SPE","CSD","CLY","CAF","CAL","CEI","CEL","CMH","CFH","ESB","ESC","CAM","CED","CME",
+"CNV","CHD","EDG","CJP","MST","CTR","CIB","CMR","CMS","EDC","CNI","CIL","DIG","DAN","DEA","WSP","DIO","DERM","DEV","DIT","EDU","EUP","ECN","EAP","CCD","EDZ"
+,"EUD","ELS","EEP","EGE","EDE","BXE","EMD","ENR","END","ETK","ENG","EDT","ENP","EOH","ENV","ESP","EPB","ETH","EDS","EXS","FMH","FMD","FIN","FIA","FGN",
+"FAI","FAP","FCT","FIT","FIO","FBL","FOL","EDX","FMG","FDN","FOB","EDF","GPY","GEP","GLY","GLO","CGD","GLF","GIA","GVG","GRS","GSD"
+,"GRA","GST","HEN","HPM","HSL","EDH","HTY","HON","HRM","HUS","HUM","HCS","EDY","HAS","NTO","EGS","QMB","EIT","ICY","IRP"
+,"BSI","IBL","EDK","ITB","IDP","CGS","IAS","LLI","IOP","ISS","IDS","IMD","IAC","ILI","INT","JDC","JMS","BFI","LKG","LLE","LAS","LPL","LCA","LEA",
+"LDR","ALA","LBG","EDL","LIN","ACG","MED","MAI","MAN","MSC","MSD","MKT","COM","EDO","MTH","EDQ","EGR","DME","EME","MMI","MSG","MET",
+"MDT","MDG","MDD","MHL","MIC","MLL","MFC","EDM","MGE","NVY","SPL","NEU","NSG","NWC","NUR","NRD","OBG","UCT","OCT","RO","NRO","ONC","OPH",
+"ORTH","OSM","OTO","PCB","PTH","PED","PCR","PS","PMT","PHA","PHM","RXD","PHI","PEB","EDJ","EDP","PAS","PHY","PHB","POL","NRG","PRG","PDP",
+"PVN","PBM","PSY","PAD","PAF","PBG","PUH","PHC","PHG","PHD","RAD","RGY","RLS","REG","REH","REL","RSH","RHL","ROM","SCT","SLCT",
+"SRA","SRB","SRE","SRG","SAR","SRL","SRN","HTM","RMI","GEY","ARTD","ARH","SGS","ISM","LIS","IGS","MKI","MUS","PHT","SPF","SOK","TRD",
+"EPS","EDN","EDI","SBD","SCR","ESF","SSI","EDW","SCL","SOC","SIS","SFB","SRH","SPA","SPB","SPD","SPG","SPN","STV","SAG","STL","SGC","SUR","TAL"
+,"TEL","TEN","TSF","FAD","TAR","EDD","TRK","UEA","0000","UGE","USD","UAG","URL","XXX","URO","VVA","VSA","VBL","WST","WCB","WLE","MCM","ZOO"]
+
+statusValues = ["null","O","C"]
+
+status2Values = ["null","A","C","H","N","U"]
+
+levelValues = ["null", "UG", "GR"]
 
 class ExampleApp(QtWidgets.QMainWindow, windowUI.Ui_ClassChecker):
     def __init__(self, parent=None):
@@ -49,29 +58,37 @@ def main():
         content.setcourseStatus(form.status.currentText())
         content.setcourseStatus2(form.status2.currentText())
         content.setcourseLevel(form.level.currentText())
-        content.setCrn(form.crn.text())
+        content.setCrn(testCRN())
     
     def testVariables():
-        print("Class value of selected term: " , content.getTerm())
-        print("Class value of selected part of term: ", content.getpartofterm())
-        print("Class value of selected campus: ", content.getCampus())
-        print("Class value of selected college: ", content.getCollege())
-        print("Class value of selected department: ", content.getDepartment())
-        print("Class value of selected course status 1: ", content.getcourseStatus())
-        print("Class value of selected course status 2: ", content.getcourseStatus2())
-        print("Class value of selected course level: ", content.getcourseLevel())
-        print("Class value of selected CRN: ", content.getCrn())
+        #print("Class value of selected term: " , content.getTerm())
+        ##print("Class value of selected part of term: ", content.getpartofterm())
+        #print("Class value of selected campus: ", content.getCampus())
+        #print("Class value of selected college: ", content.getCollege())
+        #print("Class value of selected department: ", content.getDepartment())
+        #print("Class value of selected course status 1: ", content.getcourseStatus())
+        #print("Class value of selected course status 2: ", content.getcourseStatus2())
+        #print("Class value of selected course level: ", content.getcourseLevel())
+        #print("Class value of selected CRN: ", content.getCRN())
         print("Term Translation: ", termTranslation())
         print("Part of term translation: ", partsoftermTranslation())
         print("Campus translation: ", campusTranslation())
         print("College Translation: ", collegeTranslation())
+        print("Department translation: ", departmentTranslation())
+        print("Status translation: ", statusTranslation())
+        print("Status 2 translation: ", status2Translation())
+        print("Level translation: " , levelTranslation())
+        print("Current CRN: ", content.getCRN())
 
-    def testValidation():
-        if content.getCrn().isdigit():
-            return True
-        else:
-            return False
-
+    def testCRN():
+        if len(form.crn.text()) != 0:
+            if form.crn.text().isdigit() and len(form.crn.text()) == 5:
+                return form.crn.text()
+            else:
+                crnError()
+        elif len(form.crn.text()) == 0:
+            return "null"
+            
     def termTranslation():
         i = form.term.currentIndex()
         termValue = termValues[i]
@@ -92,11 +109,32 @@ def main():
         collegeValue = collegeValues[i]
         return collegeValue
 
+    def departmentTranslation():
+        i = form.departments.currentIndex()
+        departmentValue = departmentValues[i]
+        return departmentValue
+
+    def statusTranslation():
+        i = form.status.currentIndex()
+        statusValue = statusValues[i]
+        return statusValue
+
+    def status2Translation():
+        i = form.status2.currentIndex()
+        status2Value = status2Values[i]
+        return status2Value
+
+    def levelTranslation():
+        i = form.level.currentIndex()
+        levelValue = levelValues[i]
+        return levelValue
+
     def debugBrowser():
         setVariables()
         print("Debug browser function called")
         driver = openSite()
-        inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation())
+        inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
+                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN())
 
     form.pushButton.clicked.connect(setVariables)
     form.pushButton.clicked.connect(testVariables)
