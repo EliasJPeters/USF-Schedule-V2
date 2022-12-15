@@ -5,6 +5,17 @@ import windowUI
 from functions import * 
 from seleniumContents import openSite, inputInformation
 
+possibleColleges = ["1986 Conversion College", "Acad. Support & Achievement", "Applied Arts and New Media", "Architecture & Community Desig", 
+"Arts & Sciences", "Arts and Letters", "Arts and Sciences", "Arts and Sciences USFSM", "Arts and Sciences USFSP", "Basic Studies", "Behavioral & Community Science",
+"Business (BA)", "Business (BU)", "Business USFSM", "Business USFSP", "Cooperative Education", "Double Major", "Early University Programs", 
+"Education (ED)", "Education (EU)", "Education Joint Program", "Education Joint Program USFSP", "Education USFSM", "Education USFSP",
+"Engineering", "Global Sustainability", "Graduate Studies", "Hosp & Tourism Leadership", "Human and Social Sciences", "INTO Pathway",
+"Institutes and Affiliates", "Interdisciplinary Program", "Language and Literature", "Liberal Arts", "Liberal Arts & Soc Sci USFSM",
+"Marine Science", "Medicine", "Natural Sciences", "New College", "No College Designated", "Nursing", "Off Campus Term / Misc", "Office of the Registrar",
+"Program of Independent Studies", "Public Health", "School of Mental Hlth Studies", "Science & Mathematics USFSM", "Social and Behavioral Sciences",
+"Student Admissions & Advising", "Taneja College of Pharmacy", "Technology and Innovation", "The Arts", "The Honors College", "UG Student Advising",
+"USF World-Study Abroad", "Undergraduate Studies", "Undergraduate Studies USFSP", "Unused College (for stat calc)"]
+
 class ExampleApp(QtWidgets.QMainWindow, windowUI.Ui_ClassChecker):
     def __init__(self, parent=None):
         super(ExampleApp, self).__init__(parent)
