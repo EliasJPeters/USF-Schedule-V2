@@ -66,7 +66,7 @@ class formContents():
     def setCrn(self, crn):
         self.crn = crn
 
-    def getCrn(self):
+    def getCRN(self):
         return self.crn
 
     def setSubject(self, subject):

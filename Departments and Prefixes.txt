@@ -1,0 +1,349 @@
+      -- Select Department --
+ASG      A&S - General
+ACP      Academic Computing
+ACC      Accounting
+ADG      Admin. Svcs - General
+EDB      Administration/Supervision
+ADM      Admissions
+ATS      Adult/Transfer Services
+EDV      Adult/Vocational/Hum Res Div
+ADV      Advancement Services
+AFA      Africana Studies
+AMH      Aging & Mental Health
+AGE      Aging Studies
+AFR      Air Force (ROTC)
+HUN      Allied Health Science
+AAS      Alumni Association
+AMS      American Studies
+ANA      Anatomy
+ANC      Anchin Ctr. Advancement Teach.
+ANE      Anesthesiology
+ANT      Anthropology
+ARC      Architecture
+MIS      Army (ROTC)
+ART      Art
+EDA      Art Education
+ACD      Arts & Sciences Deans Office
+AST      Astronomy
+ATH      Athletic Training
+ATG      Athletics - General
+BIS      BIS,SUS, External Degree Prog.
+BSB      Baseball
+EGB      Basic & Interdisciplinary Eng.
+CBS      Basic Studies
+BKB      Basketball
+BCD      Behav & Comm Sci Deans Office
+BMB      Biochemistry & Molecular Biol.
+BSP      Biological Sciences
+BIO      Biology
+BIN      Biology - Integrative
+BCM      Biology-Cell, Micro, Molecular
+BOT      Botany
+BDG      Budget - General
+MBA      Business Administration
+GBA      Business Administration - Gen.
+BUD      Business Deans Office
+CMM      Cell, Micro, and Molecular Bio
+CDV      Center - Corporate Development
+COT      Center for Ocean Technology
+CSW      Center for Swallowing Disorder
+ECM      Chem, Bio & Materials Engineer
+ECH      Chemical & Biomedical Eng
+CHM      Chemistry
+CFS      Child & Family Studies
+EDR      Childhood Ed & Literacy Stdies
+CCR      Chiles Center
+EGX      Civil & Environmental Engineer
+CLA      Classics (Greek and Latin)
+ENT      Cntr - Entrepreneurshp & Tech
+COE      Co-op Education
+CSL      Coalition for Science Literacy
+SPE      Communication
+CSD      Communication Sci & Disorders
+CLY      Communicology
+CAF      Community Adv. - African Am.
+CAL      Community Adv. - Latino
+CEI      Community Engagement Initiativ
+CEL      Community Experiential Learnin
+CMH      Community Mental Health
+CFH      Community and Family Health
+ESB      Computer Science & Engineering
+ESC      Computer Service Courses
+CAM      Contemporary Art Museum
+CED      Continuing Education
+CME      Continuing Medical Education
+CNV      Converted Department
+CHD      Counseling Ctr - Human Develop
+EDG      Counselor Education
+CJP      Criminology
+MST      Ctr Excellence in Technology
+CTR      Ctr Urban Transportation Rsrch
+CIB      Ctr for International Business
+CMR      Ctr for Microeletronics Rsrch
+CMS      Ctr. Economic & Mgmt. Research
+EDC      Curriculum
+CNI      Curriculum and Instruction
+CIL      Curriculum, Instruct & Learn
+DIG      D. I. - General
+DAN      Dance
+DEA      Dean&#39;s Office
+WSP      Department of Women&#39;s Studies
+DIO      Dept Inter Onc
+DERM      Dermatology
+DEV      Development
+DIT      Div. of Information Technology
+EDU      Early Childhood Education
+EUP      Early University Programs
+ECN      Economics
+EAP      Edu & Psychological Studies
+CCD      Educ. Rsrch Ctr for Child Dev.
+EDZ      Education - General
+EUD      Education Deans Office
+ELS      Educational Leadership
+EEP      Educational Psychology
+EGE      Electrical Engineering
+EDE      Elementary Education
+BXE      Elementary/Exceptional Ed
+EMD      Emergency Medicine
+ENR      Engineering - General
+END      Engineering Deans Office
+ETK      Engineering Technology
+ENG      English
+EDT      English Ed & Speech Comm. Ed.
+ENP      Entrepreneurship
+EOH      Environ. & Occupational Health
+ENV      Environment
+ESP      Environmental Science & Policy
+EPB      Epidemiology and Biostatistics
+ETH      Ethics Center
+EDS      Exceptional Child Education
+EXS      Exercise Science
+FMH      FMHI
+FMD      Family Medicine
+FIN      Finance
+FIA      Financial Aid
+FGN      Fine Arts - General
+FAI      Fine Arts Interdisciplinary
+FAP      Fine Arts Pre-major
+FCT      Florida Ctr Instructional Tech
+FIT      Florida Inst. of Government
+FIO      Florida Inst. of Oceanography
+FBL      Football
+FOL      Foreign Language
+EDX      Foreign Language Education
+FMG      Fort Myers - General
+FDN      Foundation
+FOB      Foundation Business Office
+EDF      Foundations
+GPY      Geography
+GEP      Geography & Env Sci & Policy
+GLY      Geology
+GLO      Global Health
+CGD      Global Sustain Deans Office
+GLF      Golf
+GIA      Government & Intl Affairs
+GVG      Government Relations
+GRS      Graduate School Department
+GSD      Graduate Studies Deans Office
+GRA      Graphic Design
+GST      Graphicstudio
+HEN      Health Education
+HPM      Health Policy and Management
+HSL      Health Sciences Library
+EDH      Higher Ed/Community College Ed
+HTY      History
+HON      Honors Program
+HRM      Hotel & Restaurant Management
+HUS      Human Services
+HUM      Humanities
+HCS      Humanities & Cultural Studies
+EDY      Humanities Education
+HAS      Humanities/American Studies
+NTO      INTO
+EGS      Industrial & Mgmt Sys Engineer
+QMB      Information Sys & Decision Sci
+EIT      Information Technology
+ICY      Inst At-Risk Infants & Familie
+IRP      Inst Instr Rsrch & Practice
+BSI      Inst. for Biomolecular Sci.
+IBL      Institute on Black Life
+EDK      Instructional Technology
+ITB      Integrative Biology
+IDP      Interdept
+CGS      Interdisc. Ctr. -Greek Studies
+IAS      Interdisciplinary Arts & Scien
+LLI      Interdisciplinary Language Lit
+IOP      Interdisciplinary Oncology
+ISS      Interdisciplinary Social Sci.
+IDS      Interdisciplinary Studies
+IMD      Internal Medicine
+IAC      International Affairs Center
+ILI      International Language Inst.
+INT      International Studies
+JDC      Journalism & Digital Com
+JMS      Journalism & Media Studies
+BFI      Kate Tiedemann Schl Bus & Fin
+LKG      Lakeland - General
+LLE      Lang, Lit, EdD, Ex Ed & Phy Ed
+LAS      Latin Am Studies/Caribbean Ctr
+LPL      Ldr, Policy & Lifelong Learn
+LCA      Ldrs, Coun, Adlt, Car & H Educ
+LEA      Leadership Development
+LDR      Leadership Studies
+ALA      Liberal Studies
+LBG      Library - General
+EDL      Library and Information Sci.
+LIN      Linguistics
+ACG      Lynn Pippenger Schl of Account
+MED      MD Program
+MAI      Maine Exchange
+MAN      Management and Organization
+MSC      Marine Science
+MSD      Marine Science Deans Office
+MKT      Marketing
+COM      Mass Communication
+EDO      Mathematics Education
+MTH      Mathematics and Statistics
+EDQ      Measurement-Research
+EGR      Mechanical Engineering
+DME      Medical Education
+EME      Medical Engineering
+MMI      Medical Microbiol & Immunology
+MSG      Medical Sciences
+MET      Medical Technology (MET)
+MDT      Medical Technology (MDT)
+MDG      Medicine - General
+MDD      Medicine Deans Office
+MHL      Mental Health Law & Policy
+MIC      Microbiology
+MLL      Modern Language & Linguistics
+MFC      Moffitt Center - General
+EDM      Music Education
+MGE      Natl Resource Ctr Mid Grad Edu
+NVY      Naval (ROTC)
+SPL      Nelson Poynter Library
+NEU      Neurology
+NSG      Neurosurgery
+NWC      New College
+NUR      Nursing
+NRD      Nursing Deans Office
+OBG      Obstetrics/Gynecology
+UCT      Off-Campus/Overseas Studies
+OCT      Off-campus Term
+RO      Office of the Registrar-ND (RO)
+NRO      Office of the Registrar-ND (NRO)
+ONC      Oncologic Sciences
+OPH      Ophthalmology
+ORTH      Ortho
+OSM      Orthopaedics & Sports Medicine
+OTO      Otolaryngology-Head Neck Srgry
+PCB      Path and Cell Bio
+PTH      Pathology & Lab. Medicine
+PED      Pediatrics
+PCR      Pharm & Clinical Research
+PS      Pharmaceutical Sciences
+PMT      Pharmacology & Therapeutics
+PHA      Pharmacy (PHA)
+PHM      Pharmacy (PHM)
+RXD      Pharmacy Deans Office
+PHI      Philosophy
+PEB      Physical Education (Elective)
+EDJ      Physical Education Elective
+EDP      Physical Education for Teacher
+PAS      Physician Assistant
+PHY      Physics
+PHB      Physiology & Biophysics
+POL      Political Science
+NRG      Pre-Nursing
+PRG      President&#39;s Office - General
+PDP      Professional Development Prgm
+PVN      Provost Acad. Affairs- General
+PBM      Psychiatry & Behav. Medicine
+PSY      Psychology
+PAD      Public Administration
+PAF      Public Affairs
+PBG      Public Broadcasting - General
+PUH      Public Health (PUH)
+PHC      Public Health (PHC)
+PHG      Public Health - General
+PHD      Public Health Deans Office
+RAD      Radio
+RGY      Radiology
+RLS      Reading & Learning Strategies
+REG      Registrar&#39;s Office
+REH      Rehab & Mental Hlth Counseling
+REL      Religious Studies
+RSH      Research and Graduate Affairs
+RHL      Residence Hall
+ROM      Romance
+SCT      SCATT
+SLCT      SELECT Program
+SRA      Sarasota - Arts & Sciences
+SRB      Sarasota - Business
+SRE      Sarasota - Education
+SRG      Sarasota - General
+SAR      Sarasota - Global Engagement
+SRL      Sarasota - Library
+SRN      Sarasota - Nursing
+HTM      Schl Hospitality & Toursm Mgmt
+RMI      Schl Risk Mgmt Insur & Securty
+GEY      Schl of Aging Studies
+ARTD      Schl of Architect & Comm Desgn
+ARH      Schl of Art & Art History
+SGS      Schl of Geosciences
+ISM      Schl of Info Systems & Mgmt
+LIS      Schl of Information
+IGS      Schl of Interdis Global Stdies
+MKI      Schl of Marketing & Innovation
+MUS      Schl of Music
+PHT      Schl of PT and Reb Sci
+SPF      Schl of Public Affairs
+SOK      Schl of Social Work
+TRD      Schl of Theatre & Dance
+EPS      School Psychology
+EDN      Science Education
+EDI      Secondary Education, General
+SBD      Small Business Development Ctr
+SCR      Soccer
+ESF      Social Foundations
+SSI      Social Sci. Interdisciplinary
+EDW      Social Science Education
+SCL      Society, Culture and Language
+SOC      Sociology
+SIS      Sociology & Inter Social Sci
+SFB      Softball
+SRH      Sponsored Research
+SPA      St. Petersburg - Arts & Sci.
+SPB      St. Petersburg - Business
+SPD      St. Petersburg - Education
+SPG      St. Petersburg - General
+SPN      St. Petersburg - Nursing
+STV      Stavros Ctr Free Enterprise
+SAG      Student Affairs - General
+STL      Student Leadership
+SGC      Suncoast Gerontology Ctr.
+SUR      Surgery
+TAL      Teaching & Learning
+TEL      Television
+TEN      Tennis
+TSF      ThUSFar
+FAD      The Arts Deans Office
+TAR      Theater & Dance
+EDD      Theater Education
+TRK      Track
+UEA      USF World Education Abroad
+0000      Undeclared Department
+UGE      Undergrad Ed/Comm Coll Relatns
+USD      Undergrad Studies Deans Office
+UAG      Univ. Adv. - General
+URL      University Relations
+XXX      Unknown Department
+URO      Urology
+VVA      Verbal & Visual Arts
+VSA      Very Special Arts
+VBL      Volleyball
+WST      Women&#39;s & Gender Studies
+WCB      Women&#39;s Club
+WLE      World Languages
+MCM      Zimmer Schl Advert & Mass Comm
+ZOO      Zoology
