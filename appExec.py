@@ -96,7 +96,7 @@ def main():
         setVariables()
         print("Debug browser function called")
         driver = openSite()
-        inputInformation(driver, termTranslation())
+        inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation())
 
     form.pushButton.clicked.connect(setVariables)
     form.pushButton.clicked.connect(testVariables)
