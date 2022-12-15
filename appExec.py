@@ -11,6 +11,8 @@ from seleniumContents import openSite, inputInformation
 possibleTermValues = ["202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
 
+possiblepartoftermValues = ["A","B","S","X","D","G","Z","W","Y"]
+
 possibleColleges = ["1986 Conversion College", "Acad. Support & Achievement", "Applied Arts and New Media", "Architecture & Community Desig", 
 "Arts & Sciences", "Arts and Letters", "Arts and Sciences", "Arts and Sciences USFSM", "Arts and Sciences USFSP", "Basic Studies", "Behavioral & Community Science",
 "Business (BA)", "Business (BU)", "Business USFSM", "Business USFSP", "Cooperative Education", "Double Major", "Early University Programs", 
@@ -56,6 +58,7 @@ def main():
         print("Class value of selected course level: ", content.getcourseLevel())
         print("Class value of selected CRN: ", content.getCrn())
         print("Term Translation: ", termTranslation())
+        print("Part of term translation: ", partsoftermTranslation())
 
     def testValidation():
         if content.getCrn().isdigit():
@@ -67,6 +70,11 @@ def main():
         i = form.term.currentIndex()
         termValue = possibleTermValues[i]
         return termValue
+
+    def partsoftermTranslation():
+        i = form.partofterm.currentIndex()
+        partoftermValue = possiblepartoftermValues[i]
+        return partoftermValue
     
     def debugBrowser():
         setVariables()
