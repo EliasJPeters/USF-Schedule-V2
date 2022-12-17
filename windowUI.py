@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_ClassChecker(object):
     def setupUi(self, ClassChecker):
         ClassChecker.setObjectName("ClassChecker")
-        ClassChecker.resize(1139, 441)
+        ClassChecker.resize(1157, 441)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -313,7 +313,7 @@ class Ui_ClassChecker(object):
         self.pushButton.setPalette(palette)
         self.pushButton.setObjectName("pushButton")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 1065, 327))
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 1102, 327))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -2657,7 +2657,7 @@ class Ui_ClassChecker(object):
         self.gridLayout.addWidget(self.crn_2, 6, 3, 1, 1)
         ClassChecker.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ClassChecker)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1139, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1157, 21))
         self.menubar.setObjectName("menubar")
         ClassChecker.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(ClassChecker)
