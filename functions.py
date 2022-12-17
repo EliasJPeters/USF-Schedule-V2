@@ -14,6 +14,7 @@ class formContents():
         self.crn = ""
         self.subject = ""
         self.number = ""
+        self.email = ""
 
     def setTerm(self, term):
         self.term = term
@@ -81,6 +82,11 @@ class formContents():
     def getNumber(self):
         return self.number
 
+    def setEmail(self, email):
+        self.email = email
+
+    def getEmail(self):
+        return self.email
 
 
 
