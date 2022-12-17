@@ -4,9 +4,11 @@ from email.headerregistry import Address
 from email.mime.text import MIMEText
 import ssl
 
+recipient = ""
+
 email_sender = "usfclassbot@gmail.com"
 email_password = "tgtnxufmyurgpxxa"
-email_receiver = "eligreenmen@gmail.com"
+email_receiver = recipient
 
 subject = "Test message subject"
 body = """
