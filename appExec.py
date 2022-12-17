@@ -5,6 +5,7 @@ import sys
 import windowUI
 from functions import * 
 from seleniumContents import openSite, inputInformation, crnError, subjectError, numberError
+from email_validator import validate_email, EmailNotValidError
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
@@ -61,6 +62,7 @@ def main():
         content.setCrn(testCRN())
         content.setSubject(subjectValidation())
         content.setNumber(testNumber())
+        content.setEmail(emailDetection())
     
     def testVariables():
         #print("Class value of selected term: " , content.getTerm())
@@ -83,6 +85,7 @@ def main():
         print("Current CRN: ", content.getCRN())
         print("Current subject: ", content.getSubject())
         print("Class Number: ", content.getNumber())
+        print("Email: ", content.getEmail())
 
     def testCRN():
         if len(form.crn.text()) != 0:
@@ -156,6 +159,17 @@ def main():
         elif len(form.crn_5.text()) == 0:
             return "null"
 
+    def emailDetection():
+        if len(form.emailInput.text()) == 0:
+            return "null"
+        elif len(form.emailInput.text()) != 0:
+            try:
+                v = validate_email(form.emailInput.text())
+                email = v["email"]
+                return email
+            except EmailNotValidError as error:
+                pass
+     
     def debugBrowser():
         setVariables()
         print("Debug browser function called")
