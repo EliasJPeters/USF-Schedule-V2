@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QMessageBox
 import sys
 import windowUI
 from functions import * 
-from seleniumContents import openSite, inputInformation, crnError
+from seleniumContents import openSite, inputInformation, crnError, subjectError, numberError
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
@@ -59,6 +59,8 @@ def main():
         content.setcourseStatus2(form.status2.currentText())
         content.setcourseLevel(form.level.currentText())
         content.setCrn(testCRN())
+        content.setSubject(subjectValidation())
+        content.setNumber(testNumber())
     
     def testVariables():
         #print("Class value of selected term: " , content.getTerm())
@@ -79,6 +81,8 @@ def main():
         print("Status 2 translation: ", status2Translation())
         print("Level translation: " , levelTranslation())
         print("Current CRN: ", content.getCRN())
+        print("Current subject: ", content.getSubject())
+        print("Class Number: ", content.getNumber())
 
     def testCRN():
         if len(form.crn.text()) != 0:
@@ -86,6 +90,7 @@ def main():
                 return form.crn.text()
             else:
                 crnError()
+                return "null"
         elif len(form.crn.text()) == 0:
             return "null"
             
@@ -129,12 +134,34 @@ def main():
         levelValue = levelValues[i]
         return levelValue
 
+    def subjectValidation():
+        if len(form.crn_2.text()) != 0:
+            if not form.crn_2.text().isdigit() and len(form.crn_2.text()) == 3:
+                return form.crn_2.text()
+            else: 
+                subjectError()
+                return "null"
+        elif len(form.crn_2.text()) == 0:
+            return "null"
+
+    def testNumber():
+        if len(form.crn_5.text()) != 0:
+            if form.crn_5.text().isdigit() and len(form.crn_5.text()) == 4:
+                return form.crn_5.text()
+            elif len(form.crn_5.text()) == 5 and not form.crn_5.text()[4].isdigit():
+                return form.crn_5.text()
+            else:
+                numberError()
+                return "null"
+        elif len(form.crn_5.text()) == 0:
+            return "null"
+
     def debugBrowser():
         setVariables()
         print("Debug browser function called")
         driver = openSite()
         inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN())
+                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), content.getNumber())
 
     form.pushButton.clicked.connect(setVariables)
     form.pushButton.clicked.connect(testVariables)
