@@ -15,6 +15,7 @@ class formContents():
         self.subject = ""
         self.number = ""
         self.email = ""
+        self.sendEmail = False
 
     def setTerm(self, term):
         self.term = term
@@ -87,6 +88,12 @@ class formContents():
 
     def getEmail(self):
         return self.email
+
+    def setSendEmail(self, sendEmail):
+        self.sendEmail = sendEmail
+
+    def getSendEmail(self):
+        return self.sendEmail
 
 
 
