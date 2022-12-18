@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QMessageBox
 import sys
 import windowUI
 from functions import * 
-from seleniumContents import openSite, inputInformation, crnError, subjectError, numberError
+from seleniumContents import openSite, inputInformation, crnError, subjectError, numberError, emailError, totalError
 from email_validator import validate_email, EmailNotValidError
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
@@ -142,8 +142,8 @@ def main():
             if not form.crn_2.text().isdigit() and len(form.crn_2.text()) == 3:
                 return form.crn_2.text()
             else: 
-                subjectError()
-                return "null"
+                #subjectError()
+                return "error"
         elif len(form.crn_2.text()) == 0:
             return "null"
 
@@ -154,8 +154,8 @@ def main():
             elif len(form.crn_5.text()) == 5 and not form.crn_5.text()[4].isdigit():
                 return form.crn_5.text()
             else:
-                numberError()
-                return "null"
+                #numberError()
+                return "error"
         elif len(form.crn_5.text()) == 0:
             return "null"
 
@@ -168,22 +168,35 @@ def main():
                 email = v["email"]
                 return email
             except EmailNotValidError as error:
-                pass
+                #emailError()
+                return "error"
+                
      
     def debugBrowser():
         setVariables()
         print("Debug browser function called")
         driver = openSite()
         inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), content.getNumber())
+                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
+                         content.getSubject(),content.getNumber())
 
-    form.pushButton.clicked.connect(setVariables)
-    form.pushButton.clicked.connect(testVariables)
+    def runtime():
+        setVariables()
+        if content.getEmail() == 'error' or content.getNumber() == 'error' or content.getSubject() == 'error':
+            print("Did not commence runtime")
+            totalError(content.getSubject(), content.getNumber(), content.getEmail())
+        else:
+            driver = openSite()
+            inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
+                            departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
+                            content.getSubject(),content.getNumber())
+
+    form.pushButton.clicked.connect(runtime)
     form.Debug.clicked.connect(debugBrowser)
     
-    #form.pushButton.clicked.connect()
     form.show()
     app.exec_()
+    
 
 if __name__ == '__main__':
     main()
