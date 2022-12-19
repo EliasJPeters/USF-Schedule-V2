@@ -9,7 +9,7 @@ email_password = "tgtnxufmyurgpxxa"
 
 def initialEmail(crn, email, courseNumber):
     subject = ("Hello! You've chosen to be notified of seat openings for the class with the CRN of: " + crn)
-    body = ("You will be emailed a notification when an open seat is detected for: " + courseNumber + "\nThanks for using this program!\n" + 
+    body = ("You will be emailed a notification when an open seat is detected for: " + courseNumber + "\n\nThanks for using this program!\n" + 
     "This project was created by Elias Peters. You can get more information from the github here: https://github.com/EliasJPeters/USF-Schedule-V2")
     
     email_receiver = email
