@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 import ssl
 
 email_sender = "usfclassbot@gmail.com"
-email_password = "tgtnxufmyurgpxxa"
+email_password = ""
 
 def initialEmail(crn, email, courseNumber):
     subject = ("Hello! You've chosen to be notified of seat openings for the class with the CRN of: " + crn)
