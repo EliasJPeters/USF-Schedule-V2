@@ -4,8 +4,18 @@ from PyQt5.QtWidgets import QMessageBox
 import sys
 import windowUI
 from functions import * 
-from seleniumContents import openSite, inputInformation, crnError, subjectError, numberError, emailError, totalError
+from seleniumContents import *
+from emailContent import *
 from email_validator import validate_email, EmailNotValidError
+
+"""
+TODO:Redesign UI
+TODO:Hidden Debug mode
+DONE:Tab order in UI
+TODO:Email notification based on seat availability.
+TODO:Initial email notifying of enabling of email contact
+TODO:Structure and frequency of emails/ info provided/included
+"""
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
@@ -63,6 +73,7 @@ def main():
         content.setSubject(subjectValidation())
         content.setNumber(testNumber())
         content.setEmail(emailDetection())
+        content.setSendEmail(determineEmail(content.getEmail(), content.getCRN()))
     
     def testVariables():
         #print("Class value of selected term: " , content.getTerm())
@@ -86,6 +97,7 @@ def main():
         print("Current subject: ", content.getSubject())
         print("Class Number: ", content.getNumber())
         print("Email: ", content.getEmail())
+        print("Send Email?: ", content.getSendEmail())
 
     def testCRN():
         if len(form.crn.text()) != 0:
@@ -171,15 +183,38 @@ def main():
                 #emailError()
                 return "error"
                 
-     
     def debugBrowser():
         setVariables()
+        testVariables()
         print("Debug browser function called")
         driver = openSite()
         inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
                          departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
                          content.getSubject(),content.getNumber())
 
+    def testVariablesDebug():
+        setVariables()
+        testVariables()
+
+    def testEmailSend():
+        setVariables()
+        testVariables()
+        if content.getEmail() == 'error' or content.getNumber() == 'error' or content.getSubject() == 'error':
+            print("Did not commence runtime")
+            totalError(content.getSubject(), content.getNumber(), content.getEmail())
+        else:
+            driver = openSite()
+            if content.getSendEmail():
+                inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
+                            departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
+                            content.getSubject(),content.getNumber())
+                initialEmail(content.getCRN(),content.getEmail(),getCourseNumber(driver))
+                print("Email sent")
+                quitDriver(driver)
+            else:
+                print("Email not sent.")
+
+            
     def runtime():
         setVariables()
         if content.getEmail() == 'error' or content.getNumber() == 'error' or content.getSubject() == 'error':
@@ -190,10 +225,14 @@ def main():
             inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
                             departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
                             content.getSubject(),content.getNumber())
-
+            quitDriver(driver)
+            
+    
+    
     form.pushButton.clicked.connect(runtime)
     form.Debug.clicked.connect(debugBrowser)
-    
+    form.testVariables.clicked.connect(testVariablesDebug)
+    form.testEmail.clicked.connect(testEmailSend)
     form.show()
     app.exec_()
     
