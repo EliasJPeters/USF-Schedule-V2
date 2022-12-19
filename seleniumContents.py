@@ -9,7 +9,7 @@ from appExec import *
 import time
 
 fireFoxOptions = webdriver.FirefoxOptions()
-fireFoxOptions.headless = True
+fireFoxOptions.headless = False
 website = "https://usfweb.usf.edu/DSS/StaffScheduleSearch"
 
 def openSite():
@@ -79,8 +79,7 @@ def inputInformation(driver, term, partTerm, campus, college, department, status
 
     numCols=len(driver.find_elements_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr[1]/th"))
 
-    quitDriver(driver)
-"""
+    """
     Correct value for reading number of seats open
     seats = driver.find_elements_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr[2]/td[13]")
 
@@ -97,24 +96,41 @@ def inputInformation(driver, term, partTerm, campus, college, department, status
 
     print("Total Rows: " ,numRows)
     print("Total Columns: ",numCols)
+    """
     
     for i in range(numRows-1):
         print("Session: " , driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[1]").text)
         print("CRN: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[4]").text)
+        #Include course number in email
         print("Course Number: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[5]").text)
         print("Seats Available: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[13]").text)
         print("")
 
-    firstelement = rows[0].text[0]
+    
 
+#Returns whether or not we send an email to the user. 
+#If there is an email and CRN given, we will send an email
+def determineEmail(email, crn):
+    if email != "null" and crn != "null":
+        sendEmail = True
+    else:
+        sendEmail = False
+    return sendEmail
 
+def getCourseNumber(driver):
+    try:
+        courseNumber = (driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr[2]/td[5]").text)
+        return courseNumber
+    except NoSuchElementException:
+        return "No such course Number Found"
+    """
     for index, letter in enumerate(rows[0].text):
         print(index, letter.text)
 
     for rowNumber in range(0,1):
         print(rowNumber ,rows[rowNumber].text, "\n")
 
-
+    
     results = driver.find_elements_by_xpath("//*[@id='results']/tbody")
     print(results)
     """
@@ -124,30 +140,6 @@ def crnError():
     msg.setIcon(QMessageBox.Critical)
     msg.setText("CRN Error")
     msg.setInformativeText('Please make sure the CRN is 5 digits and numeric.')
-    msg.setWindowTitle("Error")
-    msg.exec()
-
-def subjectError():
-    msg = QMessageBox()
-    msg.setIcon(QMessageBox.Critical)
-    msg.setText("Subject Error")
-    msg.setInformativeText('Please make sure the Subject is 3 letters.       (Ex: ENG)')
-    msg.setWindowTitle("Error")
-    msg.exec()
-
-def numberError():
-    msg = QMessageBox()
-    msg.setIcon(QMessageBox.Critical)
-    msg.setText("Class number Error")
-    msg.setInformativeText('Please make sure the class number is 4 numbers and 1 letter (if applicable).')
-    msg.setWindowTitle("Error")
-    msg.exec()
-
-def emailError():
-    msg = QMessageBox()
-    msg.setIcon(QMessageBox.Critical)
-    msg.setText("Email Error")
-    msg.setInformativeText('Please make sure the provided email is correct.')
     msg.setWindowTitle("Error")
     msg.exec()
 
