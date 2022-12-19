@@ -221,11 +221,15 @@ def main():
             print("Did not commence runtime")
             totalError(content.getSubject(), content.getNumber(), content.getEmail())
         else:
-            driver = openSite()
-            inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                            departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
-                            content.getSubject(),content.getNumber())
-            quitDriver(driver)
+            if content.getSendEmail() == True and termTranslation() != "null":
+                driver = openSite()
+                inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
+                                departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
+                                content.getSubject(),content.getNumber())
+                initialEmail(content.getCRN(),content.getEmail(),getCourseNumber(driver))
+                quitDriver(driver)
+            else:
+                print("Runtime not completed")
             
     
     
