@@ -1907,3 +1907,40 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://usfweb.usf.edu."
 1671410025391	Marionette	INFO	Stopped listening on port 49899
+1671411260118	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofile3PWD8C"
+1671411260523	Marionette	INFO	Marionette enabled
+1671411260530	Marionette	INFO	Listening on port 54258
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1671411260903	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofile3PWD8C\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://usfweb.usf.edu."
+1671411270916	Marionette	INFO	Stopped listening on port 54258
+1671411378773	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileULkopb"
+1671411379183	Marionette	INFO	Marionette enabled
+1671411379187	Marionette	INFO	Listening on port 54510
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1671411379568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileULkopb\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://usfweb.usf.edu."
+1671411389166	Marionette	INFO	Stopped listening on port 54510
+1671411540797	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofilekW0wV7"
+1671411541195	Marionette	INFO	Marionette enabled
+1671411541199	Marionette	INFO	Listening on port 54801
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1671411541743	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofilekW0wV7\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://usfweb.usf.edu."
+1671411546507	Marionette	INFO	Stopped listening on port 54801
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1671411660465	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELIAS\'~1\\AppData\\Local\\Temp\\rust_mozprofileCVahPz"
+1671411660877	Marionette	INFO	Marionette enabled
+1671411660882	Marionette	INFO	Listening on port 54992
+1671411661221	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ELIAS'~1\\AppData\\Local\\Temp\\rust_mozprofileCVahPz\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://usfweb.usf.edu/DSS/StaffScheduleSearch/Scripts/jquery-1.10.2.min.js, line 19: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://usfweb.usf.edu."
+1671411671217	Marionette	INFO	Stopped listening on port 54992
