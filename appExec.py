@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import QMessageBox
 import sys
 import os
 import windowUI
-import runtimeWindow
 from functions import * 
 from seleniumContents import *
 from emailContent import *
