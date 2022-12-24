@@ -2,53 +2,31 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMessageBox
 import sys
+import os
 import windowUI
+import runtimeWindow
 from functions import * 
 from seleniumContents import *
 from emailContent import *
 from email_validator import validate_email, EmailNotValidError
+from PyQt5.QtCore import QThread, pyqtSignal, QObject
 
 """
-TODO:Redesign UI
-TODO:Hidden Debug mode
+DONE:Redesign UI
+Not Needed:Hidden Debug mode
 DONE:Tab order in UI
-TODO:Email notification based on seat availability.
-TODO:Initial email notifying of enabling of email contact
-TODO:Structure and frequency of emails/ info provided/included
+DONE:Email notification based on seat availability.
+DONE:Initial email notifying of enabling of email contact
+DONE:Structure and frequency of emails/ info provided/included
+DONE:Looped checking of seats
+DONE:Change the inputInformation function variables for only Term, CRN, and email
+DONE:Validate all 3 fields are valid
+TODO:Threading to prevent freezing GUI - DIFFICULT
+DONE:Get statistics running
 """
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
 "201901","201808"]
-
-partoftermValues = ["null","A","B","S","X","D","G","Z","W","Y"]
-
-campusValues = ["null","T","S","P","L","9","7","6","8","1","3","4","2","C"]
-
-collegeValues = ["null","XX","SA","AT","AR","AC","AL","AS","AM","AP","BS","BC","BA","BU","BM","BP","CE","DM","EA","ED","EU","EJ","JP","EM","EP",
-"EN","CS","GS","HM","HT","IN","ZZ","IP","LL","LA","LM","MS","MD","NS","NC","00",
-"NR","OC","RO","BI","PH","FM","MM","SS","ST","RX","TT","FA","HC","SM","WL","US","SP"]
-
-departmentValues = ["null","ASG","ACP","ACC","ADG","EDB","ADM","ATS","EDV","ADV","AFA","AMH","AGE","AFR","HUN","AAS","AMS","ANA","ANC","ANE","ANT","ARC","MIS",
-"ART","EDA","ACD","AST","ATH","ATG","BIS","BSB","EGB","CBS","BKB","BCD","BMB","BSP","BIO","BIN","BCM","BOT","BDG","MBA","GBA","BUD","CMM","CDV","COT","CSW",
-"ECM","ECH","CHM","CFS","EDR","CCR","EGX","CLA","ENT","COE","CSL","SPE","CSD","CLY","CAF","CAL","CEI","CEL","CMH","CFH","ESB","ESC","CAM","CED","CME",
-"CNV","CHD","EDG","CJP","MST","CTR","CIB","CMR","CMS","EDC","CNI","CIL","DIG","DAN","DEA","WSP","DIO","DERM","DEV","DIT","EDU","EUP","ECN","EAP","CCD","EDZ"
-,"EUD","ELS","EEP","EGE","EDE","BXE","EMD","ENR","END","ETK","ENG","EDT","ENP","EOH","ENV","ESP","EPB","ETH","EDS","EXS","FMH","FMD","FIN","FIA","FGN",
-"FAI","FAP","FCT","FIT","FIO","FBL","FOL","EDX","FMG","FDN","FOB","EDF","GPY","GEP","GLY","GLO","CGD","GLF","GIA","GVG","GRS","GSD"
-,"GRA","GST","HEN","HPM","HSL","EDH","HTY","HON","HRM","HUS","HUM","HCS","EDY","HAS","NTO","EGS","QMB","EIT","ICY","IRP"
-,"BSI","IBL","EDK","ITB","IDP","CGS","IAS","LLI","IOP","ISS","IDS","IMD","IAC","ILI","INT","JDC","JMS","BFI","LKG","LLE","LAS","LPL","LCA","LEA",
-"LDR","ALA","LBG","EDL","LIN","ACG","MED","MAI","MAN","MSC","MSD","MKT","COM","EDO","MTH","EDQ","EGR","DME","EME","MMI","MSG","MET",
-"MDT","MDG","MDD","MHL","MIC","MLL","MFC","EDM","MGE","NVY","SPL","NEU","NSG","NWC","NUR","NRD","OBG","UCT","OCT","RO","NRO","ONC","OPH",
-"ORTH","OSM","OTO","PCB","PTH","PED","PCR","PS","PMT","PHA","PHM","RXD","PHI","PEB","EDJ","EDP","PAS","PHY","PHB","POL","NRG","PRG","PDP",
-"PVN","PBM","PSY","PAD","PAF","PBG","PUH","PHC","PHG","PHD","RAD","RGY","RLS","REG","REH","REL","RSH","RHL","ROM","SCT","SLCT",
-"SRA","SRB","SRE","SRG","SAR","SRL","SRN","HTM","RMI","GEY","ARTD","ARH","SGS","ISM","LIS","IGS","MKI","MUS","PHT","SPF","SOK","TRD",
-"EPS","EDN","EDI","SBD","SCR","ESF","SSI","EDW","SCL","SOC","SIS","SFB","SRH","SPA","SPB","SPD","SPG","SPN","STV","SAG","STL","SGC","SUR","TAL"
-,"TEL","TEN","TSF","FAD","TAR","EDD","TRK","UEA","0000","UGE","USD","UAG","URL","XXX","URO","VVA","VSA","VBL","WST","WCB","WLE","MCM","ZOO"]
-
-statusValues = ["null","O","C"]
-
-status2Values = ["null","A","C","H","N","U"]
-
-levelValues = ["null", "UG", "GR"]
 
 class ExampleApp(QtWidgets.QMainWindow, windowUI.Ui_ClassChecker):
     def __init__(self, parent=None):
@@ -62,40 +40,24 @@ def main():
     
     def setVariables():
         content.setTerm(form.term.currentText())
-        content.setpartofterm(form.partofterm.currentText())
-        content.setCampus(form.campus.currentText())
-        content.setCollege(form.college.currentText())
-        content.setDepartment(form.departments.currentText())
-        content.setcourseStatus(form.status.currentText())
-        content.setcourseStatus2(form.status2.currentText())
-        content.setcourseLevel(form.level.currentText())
         content.setCrn(testCRN())
-        content.setSubject(subjectValidation())
-        content.setNumber(testNumber())
         content.setEmail(emailDetection())
         content.setSendEmail(determineEmail(content.getEmail(), content.getCRN()))
     
     def testVariables():
-        #print("Class value of selected term: " , content.getTerm())
-        ##print("Class value of selected part of term: ", content.getpartofterm())
-        #print("Class value of selected campus: ", content.getCampus())
-        #print("Class value of selected college: ", content.getCollege())
-        #print("Class value of selected department: ", content.getDepartment())
-        #print("Class value of selected course status 1: ", content.getcourseStatus())
-        #print("Class value of selected course status 2: ", content.getcourseStatus2())
-        #print("Class value of selected course level: ", content.getcourseLevel())
-        #print("Class value of selected CRN: ", content.getCRN())
+        """
+        print("Class value of selected term: " , content.getTerm())
+        print("Class value of selected part of term: ", content.getpartofterm())
+        print("Class value of selected campus: ", content.getCampus())
+        print("Class value of selected college: ", content.getCollege())
+        print("Class value of selected department: ", content.getDepartment())
+        print("Class value of selected course status 1: ", content.getcourseStatus())
+        print("Class value of selected course status 2: ", content.getcourseStatus2())
+        print("Class value of selected course level: ", content.getcourseLevel())
+        print("Class value of selected CRN: ", content.getCRN())
+        """
         print("Term Translation: ", termTranslation())
-        print("Part of term translation: ", partsoftermTranslation())
-        print("Campus translation: ", campusTranslation())
-        print("College Translation: ", collegeTranslation())
-        print("Department translation: ", departmentTranslation())
-        print("Status translation: ", statusTranslation())
-        print("Status 2 translation: ", status2Translation())
-        print("Level translation: " , levelTranslation())
         print("Current CRN: ", content.getCRN())
-        print("Current subject: ", content.getSubject())
-        print("Class Number: ", content.getNumber())
         print("Email: ", content.getEmail())
         print("Send Email?: ", content.getSendEmail())
 
@@ -104,7 +66,6 @@ def main():
             if form.crn.text().isdigit() and len(form.crn.text()) == 5:
                 return form.crn.text()
             else:
-                crnError()
                 return "null"
         elif len(form.crn.text()) == 0:
             return "null"
@@ -113,7 +74,7 @@ def main():
         i = form.term.currentIndex()
         termValue = termValues[i]
         return termValue
-
+    """
     def partsoftermTranslation():
         i = form.partofterm.currentIndex()
         partoftermValue = partoftermValues[i]
@@ -170,7 +131,7 @@ def main():
                 return "error"
         elif len(form.crn_5.text()) == 0:
             return "null"
-
+    """
     def emailDetection():
         if len(form.emailInput.text()) == 0:
             return "null"
@@ -188,9 +149,7 @@ def main():
         testVariables()
         print("Debug browser function called")
         driver = openSite()
-        inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                         departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
-                         content.getSubject(),content.getNumber())
+        inputInformation(driver, termTranslation(), content.getCRN())
 
     def testVariablesDebug():
         setVariables()
@@ -199,47 +158,88 @@ def main():
     def testEmailSend():
         setVariables()
         testVariables()
-        if content.getEmail() == 'error' or content.getNumber() == 'error' or content.getSubject() == 'error':
+        if content.getEmail() == 'error':
             print("Did not commence runtime")
-            totalError(content.getSubject(), content.getNumber(), content.getEmail())
+            totalError(content.getSubject(), content.getEmail(), termTranslation())
         else:
             driver = openSite()
             if content.getSendEmail():
-                inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                            departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
-                            content.getSubject(),content.getNumber())
+                inputInformation(driver, termTranslation(), content.getCRN())
                 initialEmail(content.getCRN(),content.getEmail(),getCourseNumber(driver))
+                seatEmail(content.getEmail(),getCourseNumber(driver))
                 print("Email sent")
                 quitDriver(driver)
             else:
                 print("Email not sent.")
-
-            
+    
     def runtime():
         setVariables()
-        if content.getEmail() == 'error' or content.getNumber() == 'error' or content.getSubject() == 'error':
+        if content.getEmail() == 'error':
             print("Did not commence runtime")
-            totalError(content.getSubject(), content.getNumber(), content.getEmail())
+            totalError(content.getEmail(), content.getCRN(), termTranslation())
         else:
             if content.getSendEmail() == True and termTranslation() != "null":
                 driver = openSite()
-                inputInformation(driver, termTranslation(), partsoftermTranslation(), campusTranslation(), collegeTranslation(), 
-                                departmentTranslation(),statusTranslation(), status2Translation(), levelTranslation(), content.getCRN(), 
-                                content.getSubject(),content.getNumber())
+                inputInformation(driver, termTranslation(), content.getCRN())
                 initialEmail(content.getCRN(),content.getEmail(),getCourseNumber(driver))
+                loopedCheck(driver)
                 quitDriver(driver)
+                return driver
             else:
                 print("Runtime not completed")
+                totalError(content.getEmail(), content.getCRN(), termTranslation())
+                
+    
+
+    """
+    Page containing info needs to stay open so quitDriver() needs to be removed from basic runtime, unless
+        the loop is before the driver quits.
+    1. Needs to refresh the page after certain amount of time (5-10 Minutes?).
+    2. Needs to recheck seating data. Only seating data needs recheck, CRN and class number is still stored.
+        (Exit out initial UI window and only have a tiny window open for user to confirm the program is still running? Prevents the user
+        from entering another set of credentials to be reminded of more than one class. (Future update?))
+    """
+    def loopedCheck(driver):
+        keepChecking = True
+        timesChecked = 0
+        timesSeatOpen = 0        
+        time.sleep(3)
+        while keepChecking:
+            timesChecked = timesChecked + 1
+            driver.close()
+            driver.switch_to.window(driver.window_handles[0])
+            search = driver.find_element_by_css_selector("#InnerWrapper > div.container > form > button:nth-child(15)")
+            search.click()
+            time.sleep(2)
+            driver.switch_to.window(driver.window_handles[1])
+            time.sleep(1)
+            try:
+                seats = (driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr[2]/td[13]"))
+                os.system('cls')                
+                print("Times Checked: ", timesChecked)
+                #print("Seats open: ", seats.text)
+                print("Times Unsuccessful: ", (timesChecked-timesSeatOpen))
+                print("Times Successful: ", timesSeatOpen)
+                if seats.text != "0":
+                    seatEmail(content.getEmail(),getCourseNumber(driver), seats.text)
+                    timesSeatOpen = timesSeatOpen + 1 
+                form.timesCheckedValue.setText(str(timesChecked))
+                form.successfulValue.setText(str(timesSeatOpen))
+            except NoSuchElementException:
+                print("Unable to locate seats on table!")
             
-    
-    
-    form.pushButton.clicked.connect(runtime)
+            time.sleep(60)
+                
+
+    driver = form.pushButton.clicked.connect(runtime)
     form.Debug.clicked.connect(debugBrowser)
     form.testVariables.clicked.connect(testVariablesDebug)
     form.testEmail.clicked.connect(testEmailSend)
     form.show()
     app.exec_()
+    quitDriver(driver)
     
 
 if __name__ == '__main__':
     main()
+    
