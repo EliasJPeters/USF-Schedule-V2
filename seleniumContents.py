@@ -9,7 +9,7 @@ from appExec import *
 import time
 
 fireFoxOptions = webdriver.FirefoxOptions()
-fireFoxOptions.headless = False
+fireFoxOptions.headless = True
 website = "https://usfweb.usf.edu/DSS/StaffScheduleSearch"
 
 def openSite():
@@ -19,50 +19,14 @@ def openSite():
     driver.get(website)
     return driver
 
-def inputInformation(driver, term, partTerm, campus, college, department, status, status2, level, crn, subject, number):
+def inputInformation(driver, term, crn):
     if term != "null":
         select = Select(driver.find_element_by_name("P_SEMESTER")) 
         select.select_by_value(term)
 
-    if partTerm != "null":
-        select = Select(driver.find_element_by_name("P_SESSION")) 
-        select.select_by_value(partTerm)
-
-    if campus != "null":
-        select = Select(driver.find_element_by_name("P_CAMPUS"))
-        select.select_by_value(campus)
-
-    if college != "null":
-        select = Select(driver.find_element_by_name("P_COL"))
-        select.select_by_value(college)
-
-    if department != "null":
-        select = Select(driver.find_element_by_name("P_DEPT"))
-        select.select_by_value(department)
-
-    if status != "null":
-        select = Select(driver.find_element_by_name("p_status"))
-        select.select_by_value(status)
-
-    if status2 != "null":
-        select = Select(driver.find_element_by_name("p_ssts_code"))
-        select.select_by_value(status2)
-
-    if level != "null":
-        select = Select(driver.find_element_by_name("P_CRSE_LEVL"))
-        select.select_by_value(level)
-
     if crn != "null":
         crnspot = driver.find_element_by_name("P_REF")
         crnspot.send_keys(crn)
-
-    if subject != "null":
-        crnspot = driver.find_element_by_name("P_SUBJ")
-        crnspot.send_keys(subject)
-
-    if number != "null":
-        crnspot = driver.find_element_by_name("P_NUM")
-        crnspot.send_keys(number)
 
     driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     time.sleep(1)
@@ -98,6 +62,7 @@ def inputInformation(driver, term, partTerm, campus, college, department, status
     print("Total Columns: ",numCols)
     """
     
+    """
     for i in range(numRows-1):
         print("Session: " , driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[1]").text)
         print("CRN: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[4]").text)
@@ -105,7 +70,7 @@ def inputInformation(driver, term, partTerm, campus, college, department, status
         print("Course Number: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[5]").text)
         print("Seats Available: ", driver.find_element_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr["+str(i+2)+"]/td[13]").text)
         print("")
-
+    """
     
 
 #Returns whether or not we send an email to the user. 
@@ -135,6 +100,10 @@ def getCourseNumber(driver):
     print(results)
     """
 
+def getNumberSeats(driver):
+    numSeats = driver.find_elements_by_xpath("/html/body/table/tbody/tr[2]/td/div/p[2]/table/tbody/tr[2]/td[13]")
+    return numSeats
+
 def crnError():
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Critical)
@@ -143,17 +112,14 @@ def crnError():
     msg.setWindowTitle("Error")
     msg.exec()
 
-def totalError(subject, number, email):
+def totalError(email, crn, term):
     errorText = "Error(s) were found in the following field(s): \n"
-
-    if subject == "error":
-        errorText = errorText + "-Subject\n"
-
-    if number == "error":
-        errorText = errorText + "-Number\n"
-
-    if email == "error":
+    if email == "error" or email == "null":
         errorText = errorText + "-Email\n"
+    if crn == "null":
+        errorText = errorText + "-CRN\n"
+    if term == "null":
+        errorText = errorText + "-Term\n"
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Critical)
     msg.setText("Error(s) Found.")
@@ -163,3 +129,4 @@ def totalError(subject, number, email):
 
 def quitDriver(driver):
     driver.quit()
+    print("driver quit")
