@@ -24,7 +24,6 @@ def initialEmail(crn, email, courseNumber):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context = context) as smtp:
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
-<<<<<<< HEAD
 
 def seatEmail(email, courseNumber,openSeats):
     subject = ("An open seat has been detected!")
@@ -44,5 +43,3 @@ def seatEmail(email, courseNumber,openSeats):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context = context) as smtp:
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
-=======
->>>>>>> 83a9f49c327e6a2892b93043748fa7b85a08d6cf
