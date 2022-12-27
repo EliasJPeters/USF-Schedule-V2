@@ -142,7 +142,6 @@ def main():
                 email = v["email"]
                 return email
             except EmailNotValidError as error:
-                #emailError()
                 return "error"
                 
     def debugBrowser():
@@ -194,7 +193,7 @@ def main():
 
     """
     Page containing info needs to stay open so quitDriver() needs to be removed from basic runtime, unless
-        the loop is before the driver quits.
+        the loop is before the driver quits. <---- It is
     1. Needs to refresh the page after certain amount of time (5-10 Minutes?).
     2. Needs to recheck seating data. Only seating data needs recheck, CRN and class number is still stored.
         (Exit out initial UI window and only have a tiny window open for user to confirm the program is still running? Prevents the user
