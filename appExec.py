@@ -20,8 +20,10 @@ DONE:Structure and frequency of emails/ info provided/included
 DONE:Looped checking of seats
 DONE:Change the inputInformation function variables for only Term, CRN, and email
 DONE:Validate all 3 fields are valid
-TODO:Threading to prevent freezing GUI - DIFFICULT
+TODO:Threading to prevent freezing GUI - DIFFICULT BUT IMPORTANT
 DONE:Get statistics running
+TODO: Convert string to int, compare if seats open > 0
+TODO: Multiple class support
 """
 
 termValues = ["null","202305","202301","202208","202205","202201","202108","202105","202101","202008","202005","202001","201908","201905",
@@ -219,7 +221,8 @@ def main():
                 #print("Seats open: ", seats.text)
                 print("Times Unsuccessful: ", (timesChecked-timesSeatOpen))
                 print("Times Successful: ", timesSeatOpen)
-                if seats.text != "0":
+            #Convert to int so seat numbers like -2 are not considered open and triggers an email
+                if int(seats.text) > 0:
                     seatEmail(content.getEmail(),getCourseNumber(driver), seats.text)
                     timesSeatOpen = timesSeatOpen + 1 
                 form.timesCheckedValue.setText(str(timesChecked))
