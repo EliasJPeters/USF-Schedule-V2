@@ -1,7 +1,7 @@
 # USF-Schedule-V2
 Creating a better Coursicle alternative for USF students to compensate for the horrid registration system.
 
-UPDATE - 2/1/23
+UPDATE - 2/9/23
 	
 
 Unfortunately, I am not uploading updated versions of this code due to potential monetization I can apply to it in the future. Since the last commit, this software has helped me get into 2 of my classes that were full and 2 of my friends get into theirs. Everything works and performance is great. I've been looking and working on migrating the software to a web application to make it more convienent and easy to use.
